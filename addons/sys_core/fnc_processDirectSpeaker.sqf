@@ -78,6 +78,12 @@ if (GVAR(isDeaf) || {_unit getVariable [QGVAR(isDisabled), false]} || {ACRE_LIST
     };
 };
 
+/*
+ *
+ * The "listen closely" changes to the attenuation / distance should go here, perhaps - work out player position, unit position, change _directVolume
+ *
+ */
+
 private _canUnderstand = [_unit] call FUNC(canUnderstand);
 private _params = [_speakingType, _id, !_canUnderstand, _directVolume^3, _emitterPos, _emitterDir];
 TRACE_1("SPEAKING UPDATE", _params);
